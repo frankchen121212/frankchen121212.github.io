@@ -297,15 +297,25 @@
   </div>  
 
 <center>
-<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=-N_u5okyr5Af26xPMLfHThB5f1h9CU08vA05t0faWv0"></script>
+<style>
+  #clustrmaps-container {
+      width: 100%; /* Adjust as needed, e.g., 300px, 50%, etc. */
+      max-width: 500px; /* Optional: Set a maximum width */
+      height: auto; /* Maintain proportions */
+      overflow: hidden; /* Hide any overflow */
+  }
+</style>
+
+<div id="clustrmaps-container">
+    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=-N_u5okyr5Af26xPMLfHThB5f1h9CU08vA05t0faWv0"></script>
+</div>
+
 </center>
 
 
  <div class="w3-light-grey w3-center w3-padding-24">
 		© Siyuan Chen 陈思远 | Last updated: Aug 2024 </br> Thanks the template from <a href="https://github.com/YunheWang/HomePage"> YunheWang </a>.
 <script>
-
-
 // Accordion 
 function myAccFunc() {
   var x = document.getElementById("demoAcc");

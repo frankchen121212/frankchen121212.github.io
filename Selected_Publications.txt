@@ -1,0 +1,22 @@
+
+
+KaryoXpert: An Accurate Chromosome Segmentation and Classification Framework for Karyotyping Analysis without Training with Metaphase-Image Mask Annotations
+Siyuan Chen, Kaichuang Zhang, Bing Niu, Na Li, Qiuye Jin, Haoyang Li, Juexiao Zhou, Yongguo Yu, and Xin Gao
+
+YOLOOP: A Fast and Accurate Detection Framework for Genome-wide Chromatin Loop Mapping from Hi-C data
+Siyuan Chen*, Jiuming Wang*,Inkyung Jung, Xin Gao, and Yu Li
+
+BR-ChromNet: Banding Resolution Localization of Chromosome Structural Abnormality with Conditional Random Field
+Siyuan Chen, Kaichuang Zhang, Xin Gao
+
+PPML-Omics: a Privacy-Preserving federated Machine Learning system protects patients’ privacy from omic data
+Juexiao Zhou*, Siyuan Chen*, Yulian Wu*, Haoyang Li, Bin Zhang, Longxi Zhou, Yan Hu, Zihang Xiang, Zhongxiao Li, Ningning Chen, Wenkai Han, Di Wang and Xin Gao.
+bioarxiv, 2022 | paper
+
+Deep learning identifies and quantifies recombination hotspot determinants
+Yu Li*, Siyuan Chen*, Trisevgeni Rapakoulia, Hiroyuki Kuwahara, Kevin Y. Yip, Xin Gao
+Bioinformatics , 2022 | paper
+
+Protein-RNA interaction prediction with deep learning: Structure matters
+Junkang Wei*, Siyuan Chen*, Licheng Zong*, Xin Gao, Yu Li
+Briefing in Bioinformatics, 2021 | paper

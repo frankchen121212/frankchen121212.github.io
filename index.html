@@ -173,11 +173,16 @@
     width: 22px;
     height: 22px;
     flex-shrink: 0;
-    color: var(--faint);
+    color: var(--icon-color, var(--link));
     transition: color .2s ease;
   }
 
-  .profile-links a:hover svg { color: var(--link); }
+  .profile-links a[href^="mailto:"] { --icon-color: #ea4335; }
+  .profile-links a[href^="https://scholar.google.com/"] { --icon-color: #4285f4; }
+  .profile-links a[href^="https://github.com/"] { --icon-color: #6e40c9; }
+  .profile-links a[href^="https://www.linkedin.com/"] { --icon-color: #0a66c2; }
+  .profile-links a[href^="https://www.cnblogs.com/"] { --icon-color: #e67e22; }
+  .profile-links a[href^="https://orcid.org/"] { --icon-color: #a6ce39; }
 
   .profile-links img {
     width: 22px;
@@ -402,6 +407,26 @@
 
   /* ---------- Experiences ---------- */
 
+  .experiences-scroll {
+    max-height: 520px;
+    max-height: min(520px, 65vh);
+    overflow-y: auto;
+    padding-right: 14px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--faint) var(--surface);
+    scrollbar-gutter: stable;
+  }
+
+  .experiences-scroll:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  @media print {
+    .experiences-scroll { max-height: none; overflow: visible; }
+  }
+
   .timeline { list-style: none; margin: 0; padding: 0; }
 
   .timeline li {
@@ -432,6 +457,13 @@
   }
 
   .timeline .what .where { color: var(--muted); font-size: 20.5px; }
+
+  .timeline .credential {
+    display: block;
+    color: var(--muted);
+    font-size: 18px;
+    overflow-wrap: anywhere;
+  }
 
   /* ---------- Footer ---------- */
 
@@ -797,7 +829,16 @@
         <div class="education-details">
           <div class="degree">Ph.D. candidate in Computer Science</div>
           <div class="school"><a href="https://www.kaust.edu.sa/en">King Abdullah University of Science and Technology</a>, Saudi Arabia</div>
-          <div class="period">Jan 2022 &ndash; Present</div>
+          <div class="period">Jan 2022 &ndash; Dec 2026</div>
+        </div>
+      </div>
+
+      <div class="education-item">
+        <img src="images/CUHK_logo.jpg" alt="CUHK Logo" class="school-logo">
+        <div class="education-details">
+          <div class="degree">Visiting Scholar</div>
+          <div class="school"><a href="https://www.cuhk.edu.hk/english/index.html">The Chinese University of Hong Kong</a>, Hong Kong, China</div>
+          <div class="period">Jul 2022 &ndash; Sep 2022</div>
         </div>
       </div>
 
@@ -831,13 +872,36 @@
 
     <!-- ---------- Experiences ---------- -->
     <section id="experiences">
-      <h2>Experiences</h2>
+      <h2 id="experiences-heading">Experiences</h2>
+      <div class="experiences-scroll" role="region" aria-labelledby="experiences-heading" tabindex="0">
       <ul class="timeline">
+        <li>
+          <span class="when">Sep 2026</span>
+          <span class="what">
+            <span class="title">Building Agentic AI Applications with LLMs</span>
+            <span class="where">NVIDIA &middot; Certification</span>
+            <span class="credential">Credential ID: vibGdofTQ_WVErgHNKMS8A</span>
+          </span>
+        </li>
         <li>
           <span class="when">Sep 2025 &ndash; Dec 2025</span>
           <span class="what">
             <span class="title">On-campus Teaching Assistant, CS220 Data Analytics</span>
             <span class="where">King Abdullah University of Science and Technology (KAUST), Riyadh, Saudi Arabia</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">August 11, 2025</span>
+          <span class="what">
+            <span class="title">Invited Talk, MACSYS / MIG</span>
+            <span class="where">ARC Centre of Excellence for the Mathematical Analysis of Cellular Systems (MACSYS), Melbourne Integrative Genomics (MIG), University of Melbourne &middot; Virtual</span>
+          </span>
+        </li>
+        <li>
+          <span class="when">June 17, 2025</span>
+          <span class="what">
+            <span class="title">Invited Talk</span>
+            <span class="where">Jian Ma Lab, Carnegie Mellon University &middot; Virtual</span>
           </span>
         </li>
         <li>
@@ -868,14 +932,8 @@
             <span class="where">KAUST, Saudi Arabia</span>
           </span>
         </li>
-        <li>
-          <span class="when">Jul 2022 &ndash; Sep 2022</span>
-          <span class="what">
-            <span class="title">Visiting Scholar</span>
-            <span class="where"><a href="https://www.cuhk.edu.hk/english/index.html">The Chinese University of Hong Kong</a>, Hong Kong, China</span>
-          </span>
-        </li>
       </ul>
+      </div>
     </section>
 
     <div class="map-wrap">
@@ -886,7 +944,7 @@
 </div>
 
 <footer class="site-footer">
-  &copy; Siyuan Chen 陈思远 &nbsp;|&nbsp; Last updated: Sep 2026<br>
+  &copy; Siyuan Chen 陈思远 &nbsp;|&nbsp; Last updated: Oct 2026<br>
   Design based on <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>,
   a fork of <a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes</a>.
 </footer>
